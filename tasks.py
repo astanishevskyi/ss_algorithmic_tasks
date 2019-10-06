@@ -4,13 +4,13 @@ author: Andrew Stanishevskyi
 """
 
 
-def task_108():
+def task_108(n):
     """
     Дано натуральное число n. Получить наименьшее число
     вида 2^r , превосходящее n.
     """
     try:
-        input_value = int(input('Type n: '))
+        input_value = int(n)
         if input_value > 0:
             for i in range(input_value + 1):
                 two_to_i_power = 2 ** i
@@ -22,7 +22,7 @@ def task_108():
         return 'Type integer'
 
 
-def task_331_a():
+def task_331_a(n):
     """
     Дано натуральное число n. Можно ли представить его в
     виде суммы трех квадратов натуральных чисел? Если можно,
@@ -30,7 +30,7 @@ def task_331_a():
     n = x^2 + y^2 + z^2
     """
     try:
-        input_value = int(input('Type n:'))
+        input_value = int(n)
         if input_value > 0:
 
             for x in range(input_value + 1):
@@ -48,7 +48,7 @@ def task_331_a():
         return 'Type integer'
 
 
-def task_331_b():
+def task_331_b(n):
     """
     Дано натуральное число n. Можно ли представить его в
     виде суммы трех квадратов натуральных чисел? Если можно, то
@@ -57,7 +57,7 @@ def task_331_b():
     """
 
     try:
-        input_value = int(input('Type n:'))
+        input_value = int(n)
 
         if input_value > 0:
 

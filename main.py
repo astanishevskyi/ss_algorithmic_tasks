@@ -14,11 +14,14 @@ def main():
     while True:
         select_task = input('Enter task to execute (108/331a/331b): ')
         if select_task == '108':
-            print(task_108())
+            input_data = input()
+            print(task_108(input_data))
         elif select_task == '331a':
-            print(task_331_a())
+            input_data = input()
+            print(task_331_a(input_data))
         elif select_task == '331b':
-            print(task_331_b())
+            input_data = input()
+            print(task_331_b(input_data))
         else:
             print('Type 108 or 331a or 331b')
 
