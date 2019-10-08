@@ -4,17 +4,17 @@ author: Andrew Stanishevskyi
 """
 
 
-def task_108(n):
+def task_108(input_data):
     """
     Дано натуральное число n. Получить наименьшее число
     вида 2^r , превосходящее n.
     """
     try:
-        input_value = int(n)
-        if input_value > 0:
-            for i in range(input_value + 1):
+        input_data = int(input_data)
+        if input_data > 0:
+            for i in range(input_data + 1):
                 two_to_i_power = 2 ** i
-                if two_to_i_power > input_value:
+                if two_to_i_power > input_data:
                     return two_to_i_power
         else:
             return 'n must be bigger than 0'
@@ -22,7 +22,7 @@ def task_108(n):
         return 'Type integer'
 
 
-def task_331_a(n):
+def task_331_a(input_data):
     """
     Дано натуральное число n. Можно ли представить его в
     виде суммы трех квадратов натуральных чисел? Если можно,
@@ -30,14 +30,14 @@ def task_331_a(n):
     n = x^2 + y^2 + z^2
     """
     try:
-        input_value = int(n)
-        if input_value > 0:
+        input_data = int(input_data)
+        if input_data > 0:
 
-            for x in range(input_value + 1):
-                for y in range(input_value + 1):
-                    for z in range(input_value + 1):
-                        if x ** 2 + y ** 2 + z ** 2 == input_value:
-                            return [x, y, z]
+            for x_arg in range(input_data + 1):
+                for y_arg in range(input_data + 1):
+                    for z_arg in range(input_data + 1):
+                        if x_arg ** 2 + y_arg ** 2 + z_arg ** 2 == input_data:
+                            return [x_arg, y_arg, z_arg]
 
             return 'There is no x, y, z'
 
@@ -48,7 +48,7 @@ def task_331_a(n):
         return 'Type integer'
 
 
-def task_331_b(n):
+def task_331_b(input_data):
     """
     Дано натуральное число n. Можно ли представить его в
     виде суммы трех квадратов натуральных чисел? Если можно, то
@@ -57,16 +57,16 @@ def task_331_b(n):
     """
 
     try:
-        input_value = int(n)
+        input_data = int(input_data)
 
-        if input_value > 0:
+        if input_data > 0:
 
             output = []
-            for x in range(input_value + 1):
-                for y in range(input_value + 1):
-                    for z in range(input_value + 1):
-                        if x ** 2 + y ** 2 + z ** 2 == input_value:
-                            output.append([x, y, z])
+            for x_arg in range(input_data + 1):
+                for y_arg in range(input_data + 1):
+                    for z_arg in range(input_data + 1):
+                        if x_arg ** 2 + y_arg ** 2 + z_arg ** 2 == input_data:
+                            output.append([x_arg, y_arg, z_arg])
 
             return output
         else:
